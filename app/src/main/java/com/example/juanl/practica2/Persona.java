@@ -12,6 +12,7 @@ public class Persona {
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
+        this.telefonos = new ArrayList<>();
     }
 
     public void anyadir(Telefono telefono){
