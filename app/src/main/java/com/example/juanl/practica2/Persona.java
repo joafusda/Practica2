@@ -39,7 +39,9 @@ public class Persona {
         this.apellidos = apellidos;
     }
 
-    public ArrayList<Telefono> mostrarTelefonos(){
-        return null;
+    public void mostrarTelefonos(){
+        for(Telefono item : telefonos){
+            System.out.println(item.getDescripcion() + " " + item.getNumero());
+        }
     }
 }

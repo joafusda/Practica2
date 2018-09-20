@@ -11,16 +11,18 @@ public class Principal {
         personas.get(0).anyadir(new Telefono("Movil", 555123456));
         personas.get(0).anyadir(new Telefono("Trabajo", 961234567));
 
-//        Persona p = buscar(personas, "Andres");
-//        p.mostrarTelefonos();
-
         Persona yo = new Persona(20112343, "Joan", "Fuster");
         personas.add(yo);
+
+        Persona p = buscar(personas, "Andres");
+        p.mostrarTelefonos();
+
     }
 
     public static Persona buscar(ArrayList<Persona> personas, String nombre){
+        for (Persona item : personas){
+            if (item.getNombre() == nombre) return item;
+        }
         return null;
-
     }
-
 }
